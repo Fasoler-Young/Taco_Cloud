@@ -1,16 +1,7 @@
-package com.example.taco.repo.template;
+package com.example.taco.repos;
 
-import com.example.taco.Ingredient;
+import com.example.taco.entities.Ingredient;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.Repository;
-
-import java.util.Optional;
 
 public interface IngredientRepository extends CrudRepository<Ingredient, String> {
-
-    Iterable<Ingredient> findAll();
-
-    Optional<Ingredient> findById(String id);
-
-    Ingredient save(Ingredient ingredient);
 }

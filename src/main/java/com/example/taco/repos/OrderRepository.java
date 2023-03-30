@@ -1,8 +1,8 @@
-package com.example.taco.repo.template;
+package com.example.taco.repos;
 
 
-import com.example.taco.TacoOrder;
+import com.example.taco.entities.TacoOrder;
+import org.springframework.data.repository.CrudRepository;
 
-public interface OrderRepository {
-    TacoOrder save(TacoOrder tacoOrder);
+public interface OrderRepository extends CrudRepository<TacoOrder, String> {
 }

@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Taco Cloud</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
 </head>
 <body>
-$END$
+    <h1>Register</h1>
+    <form method="post" th:action="@{/register}" id="registerForm">
+        <label for="username">Username: </label>
+        <label>
+            <input type="text" name="username" id="username">
+        </label><br/>
+
+        <label for="password">Password: </label>
+        <label>
+            <input type="text" name="password" id="password">
+        </label><br/>
+
+        <label for="city">City: </label>
+        <label>
+            <input type="text" name="city" id="city">
+        </label><br/>
+
+        <input type="submit" value="Register">
+    </form>
+
 </body>
 </html>

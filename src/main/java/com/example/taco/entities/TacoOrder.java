@@ -1,8 +1,6 @@
-package com.example.taco;
+package com.example.taco.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
 import javax.persistence.*;
@@ -45,6 +43,9 @@ public class TacoOrder implements Serializable {
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Taco> tacos = new ArrayList<>();
+
+    @ManyToOne
+    private Users users;
 
     public void addTaco(Taco taco){
         this.tacos.add(taco);
